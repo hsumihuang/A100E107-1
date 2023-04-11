@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/*視窗背景色設定*/
+body {
+  background: #fbf9cc url(../../img/bg.png) repeat-x;
+}
+
+/*連結顏色設定*/
+a {
+  color: #df4839;
+}
+a:hover {
+  color: #ff705b;
+  text-decoration: none;
+}
+
+/*頁首,導覽,頁尾的共通設定*/
+header,nav,footer {
+  text-align: center;
+}
+
+/*導覽樣式設定 grand child selector*/
+ul.menu li {
+  list-style-type: none; /* remove ., disc, circle(v), square, decimal, lower-alpha, upper-alpha */
+  display: inline-block; /* block(v), inline-block, inline, list-item, table, table-cell, none */
+  width: 180px; /* set together with inline-block*/
+  margin: 0 10px;
+}
+ /* create a button type navigaton*/
+ul.menu a {
+  background: #6fbb9a; 
+  padding: 10px;
+  display: block; /* use block to extend the area, inline (v) */
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 150%;  
+}
+
+ul.menu a:hover {
+  background: #90ddbb;
+}
+
+/*頁面標題設定*/
+h1 {
+  width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 5px solid #9c95db;
+  background-color: #6fbb9a;
+  color: #fff;
+  font-size: 300%;
+  text-align: center;
+  line-height: 1;
+  border-radius: 50%;
+  text-shadow: 1px 1px 2px #307657;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-image: linear-gradient(to bottom, #6fbb9a, #5f4a9d);
+  font-family: 'Limelight', cursive;
+}
+
+/*次標題設定*/
+.h {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px dotted #94c8b1;
+  border-left: 10px solid #705be3;
+  color: #6fbb9a;
+  border-radius: 5px 0 0 5px;
+}
+
+
+/*小標題設定*/
+h3.h-sub {
+  padding: 10px;
+  background-color: #fbf9cc;
+  color: #ff705b;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px #ffd0ad inset;
+}
+h3.h-sub span{
+  font-weight: normal;
+}
+
+/*內容區塊邊框設定: 798+40*2+40*2+1*2=960*/
+main#contents {
+  width: 798px;
+  margin: 40px auto;
+  padding: 40px 80px;
+  border: 1px solid #f6bb9e;
+  background: 
+      url(../../img/Hamster1.jpg) left top no-repeat,
+      url(../../img/Hamster2.jpg) right top no-repeat,
+      url(../../img/Hamster3.jpg) left bottom no-repeat,
+      url(../../img/Hamster4.jpg) right bottom no-repeat;
+  background-size: 50px 70px;      
+  background-color: #fff;
+}
+
+/*「更多介紹」連結設定*/
+.more {
+  text-align: right;
+}
+.more::after {
+  content: url(../../img/ico_arrow.png);
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/*區塊間分隔*/
+#contents > section + section {
+  margin-top: 80px;
+}
+
+/*文繞圖設定*/
+.imgLeft {
+  float: left; /* right*/
+  margin-right: 20px;
+}
+.imgRight {
+  float: right;
+  margin-left: 20px;
+}
+/* clear the float value: left, right, both */
+.clear {
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*圓形圖片設定*/
+.img-round {
+  border-radius: 50%;
+}
+
+.iframe {
+    border:1px solid black;
+    display:none;
+}
+

@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+/*視窗背景色設定*/
+body {
+  background: #fbf9cc url(../../img/bg.png) repeat-x;
+}
+
+/*連結顏色設定*/
+a {
+  color: #df4839;
+}
+a:hover {
+  color: #ff705b;
+  text-decoration: none;
+}
+
+/*頁首,導覽,頁尾的共通設定*/
+header,nav,footer {
+  text-align: center;
+}
+
+/*導覽樣式設定 grand child selector*/
+ul.menu li {
+  list-style-type: none; /* remove ., disc, circle(v), square, decimal, lower-alpha, upper-alpha */
+  display: inline-block; /* block(v), inline-block, inline, list-item, table, table-cell, none */
+  width: 180px; /* set together with inline-block*/
+  margin: 0 10px;
+}
+ /* create a button type navigaton*/
+ul.menu a {
+  background: #1000ff; 
+  padding: 10px;
+  display: block; /* use block to extend the area, inline (v) */
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 150%;  
+}
+
+ul.menu a:hover {
+  background: #90ddbb;
+}
+
+/*頁面標題設定*/
+h1 {
+  width: 300px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 5px solid #9c95db;
+  background-color: #6fbb9a;
+  color: #fff;
+  font-size: 300%;
+  text-align: center;
+  line-height: 1;
+  border-radius: 50%;
+  text-shadow: 1px 1px 2px #307657;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-image: linear-gradient(to bottom, #6fbb9a, #5f4a9d);
+  font-family: 'Limelight', cursive;
+}
+
+/*次標題設定*/
+.h {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px dotted #94c8b1;
+  border-left: 10px solid #d0e35b;
+  color: #6fbb9a;
+  border-radius: 5px 0 0 5px;
+}
+
+
+/*小標題設定*/
+h3.h-sub {
+  padding: 10px;
+  background-color: #fbf9cc;
+  color: #ff705b;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px #ffd0ad inset;
+}
+h3.h-sub span{
+  font-weight: normal;
+}
+
+/*內容區塊邊框設定: 798+40*2+40*2+1*2=960*/
+main#contents {
+  width: 798px;
+  margin: 40px auto;
+  padding: 40px 80px;
+  border: 1px solid #f6bb9e;
+  background: 
+      url(./img/Hamster1.jpg) left top no-repeat,
+      url(./img/Hamster2.jpg) right top no-repeat,
+      url(./img/Hamster3.jpg) left bottom no-repeat,
+      url(./img/Hamster4.jpg) right bottom no-repeat;
+  background-size: 50px 70px;      
+  background-color: #fff;
+}
+
+/*「更多介紹」連結設定*/
+.more {
+  text-align: right;
+}
+.more::after {
+  content: url(../icon/video.gif);
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/*連結圖示設定*/
+a[target="_blank"]::after {
+  content: url(../icon/ico_mail.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+a[href^="mailto:"]::after {
+  content: url(../icon/ico_mail.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+a[href^="website:"]::after {
+  content: url(../icon/ico_web.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+/*區塊間分隔*/
+#contents > section + section {
+  margin-top: 80px;
+}
+
+/*文繞圖設定*/
+.objectLeft {
+  float: left; /* right*/
+  margin-right: 20px;
+}
+.objectRight {
+  float: right;
+  margin-left: 20px;
+}
+/* clear the float value: left, right, both */
+.clear {
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*圓形圖片設定*/
+.img-round {
+  border-radius: 50%;
+}
+
+/* sidebar menu */
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* initially 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: green; /* Black: #111*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #d0e35b;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you move mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (@ top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  color: red;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidebar */
+.openbtn {
+  font-size: 60px;
+  cursor:pointer;
+  background-color: #fbf9cc; /*#111; /* black*/
+  color: green;
+  padding: 10px 15px;
+  border: none;    
+}
+
+.openbtn:hover {
+  background-color: #6fbb9a; /*#444;*/
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
